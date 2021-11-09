@@ -4,6 +4,9 @@
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.4.0",
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0",
+    "@mui/material": "^5.1.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -13,11 +16,12 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
+    "backup:tailwind": "tailwindcss --postcss -i ./src/styles/styles.css -o src/styles/compiledTailwind.css",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:tailwind": "tailwindcss --postcss  -o src/styles/compiledTailwind.css",
+    "build:tailwind": "tailwindcss -i ./src/styles/styles.css -o src/styles/compiledTailwind.css",
     "watch:tailwind": "yarn run build:tailwind --watch"
   },
   "eslintConfig": {
